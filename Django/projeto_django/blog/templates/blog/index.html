@@ -1,0 +1,42 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title_page }}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/index.css' %}">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white d-flex align-items-center" href="#">
+                <img src="{% static "blog/img/logo.png" %}" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                    Zentune's Works
+            </a>
+        </div>
+    </nav>
+
+    <div class="container text-center mt-4">
+        <div class="row row-cols-3">
+            {% for projeto in projetos %}
+                <div class="col d-flex justify-content-center align-items-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ projeto.imagem }}" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+                            <h5 class="card-title">{{ projeto.titulo }}</h5>
+                            <p class="card-text">{{ projeto.descricao }}</p>
+                            <a href="{{ projeto.link }}" class="btn btn-primary">Veja</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
