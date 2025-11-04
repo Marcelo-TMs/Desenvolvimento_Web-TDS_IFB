@@ -5,19 +5,19 @@ PROJETOS = [
         'titulo': 'Projeto 1',
         'descricao': 'Descrição breve do Projeto 1',
         'link': '#',
-        'imagem': '/static/blog/img/projeto.png',
+        'imagem': 'img/Android.png',
     },
     {
         'titulo': 'Projeto 2',
         'descricao': 'Descrição breve do Projeto 2',
         'link': '#',
-        'imagem': '/static/blog/img/projeto.png',
+        'imagem': 'img/Android.png',
     },
     {
         'titulo': 'Projeto 3',
         'descricao': 'Descrição breve do Projeto 3',
         'link': '#',
-        'imagem': '/static/blog/img/projeto.png',
+        'imagem': 'img/Android.png',
     }
 ]
 

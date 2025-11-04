@@ -15,7 +15,7 @@
     <nav class="navbar bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand text-white d-flex align-items-center" href="#">
-                <img src="{% static "blog/img/logo.png" %}" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                     Zentune's Works
             </a>
         </div>
@@ -26,7 +26,7 @@
             {% for projeto in projetos %}
                 <div class="col d-flex justify-content-center align-items-center">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ projeto.imagem }}" class="card-img-top" alt="...">
+                        <img src="{% static projeto.imagem %}" class="card-img-top" alt="...">
 
                         <div class="card-body">
                             <h5 class="card-title">{{ projeto.titulo }}</h5>
